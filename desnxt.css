@@ -54,3 +54,16 @@ img{
     line-hright: 1.6;
     color:#555;
 }
+.continue{
+    display: block;
+    margin: 20px auto;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f0f0f0;
+    font-weight: 1000;
+    font-style: oblique;
+    border-radius: 5px;
+    padding: 10px;
+    bottom: 0px;
+    cursor: pointer;
+}
