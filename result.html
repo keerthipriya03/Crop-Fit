@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Suggestion</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recommended Crops</h1>
+        <div id="cropList"></div>
+        <a href="next.html"><button>Back to Home</button></a>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            let params = new URLSearchParams(window.location.search);
+            let crops = params.get("crops") ? JSON.parse(decodeURIComponent(params.get("crops"))) : [];
+            return crops;
+        }
+
+        let crops = getQueryParams();
+        let cropListDiv = document.getElementById("cropList");
+
+        if (crops.length > 0) {
+            crops.forEach(crop => {
+                let cropCard = document.createElement("div");
+                cropCard.classList.add("crop-card");
+
+                let img = document.createElement("img");
+                img.src = crop.image;
+                img.alt = crop.name;
+
+                let name = document.createElement("h2");
+                name.innerText = crop.name;
+
+                let desc = document.createElement("p");
+                desc.innerText = crop.description;
+
+                cropCard.appendChild(img);
+                cropCard.appendChild(name);
+                cropCard.appendChild(desc);
+                cropListDiv.appendChild(cropCard);
+            });
+        } else {
+            cropListDiv.innerHTML = "<p>No suitable crops found</p>";
+        }
+    </script>
+</body>
+</html>

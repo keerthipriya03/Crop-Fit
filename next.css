@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    background: linear-gradient(120deg, #2E7D32, #81C784, #FFB74D); /* Green-Orange Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    background: #ffffff; /* White background for contrast */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+}
+
+/* Heading */
+h1 {
+    color: #2E7D32; /* Dark green for a natural feel */
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input Field */
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    border-color: #2E7D32;
+}
+
+/* Soil Selection Container */
+#soilSelection {
+    margin-top: 15px;
+}
+
+/* Hide by default */
+.hidden {
+    display: none;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Soil Buttons */
+.soil-btn {
+    background: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 8px;
+    width: 110px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Soil Images Inside Buttons */
+.soil-btn img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Button Hover Effect */
+.soil-btn:hover {
+    border-color: #2E7D32;
+    transform: scale(1.05);
+}
+
+/* Selected Button Effect */
+.soil-btn.selected {
+    border-color: #FFB74D;
+    background-color: #FFF3E0;
+    transform: scale(1.1);
+}
+
+
+/* location */  
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #2E7D32;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1B5E20;
+}
+
+select, input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
