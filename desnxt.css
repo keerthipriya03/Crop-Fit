@@ -1,19 +1,18 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and Background */
+
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('bg3.jpg'); /* Replace with your actual image URL */
+    background-image: url('bg3.jpg'); 
     background-size: cover;
     background-position: center;
-    color: #fff; /* White text color */
+    color: #fff; 
     line-height: 1.6;
-    padding-top: 60px; /* For fixed navbar */
+    padding-top: 60px; 
 }
 
 /* Navbar */
@@ -22,7 +21,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.6); 
     z-index: 1000;
     padding: 10px;
 }
@@ -47,23 +46,22 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #abcdac; /* Green hover color */
+    color: #abcdac; 
 }
 
-/* Main Container */
 .container {
     width: 80%;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
-    background-color: rgba(92, 170, 19, 0.1); /* Semi-transparent background to improve readability */
+    background-color: rgba(92, 170, 19, 0.1); 
     border-radius: 10px;
 }
 
-/* Section Styling */
+
 .section {
     padding: 50px 0;
-    background-color: rgba(92, 170, 19, 0.1); /* Added background for better text visibility */
+    background-color: rgba(92, 170, 19, 0.1); 
     margin: 20px 0;
     border-radius: 10px;
 }
@@ -72,7 +70,7 @@ h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     text-align: center;
-    color: #b9dcba; /* Green for the main heading */
+    color: #b9dcba; 
 }
 
 h3 {
@@ -103,7 +101,7 @@ strong {
     font-weight: bold;
 }
 
-/* Button Styling */
+
 .continue {
     display: block;
     margin: 20px auto;
@@ -122,7 +120,7 @@ strong {
     background-color: #45a049;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     nav ul li {
         margin: 0 10px;
