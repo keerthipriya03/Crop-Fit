@@ -2,8 +2,7 @@ const modelURL = "./my_model/model.json";
 const metadataURL = "./my_model/metadata.json";
 let model, labelContainer, maxPredictions;
 let cropData = [];
-// Store crop data globally
-// dhanu 
+
 const soilModelURL = "./soilPredict_model/model.json";
 const soilMetadataURL = "./soilPredict_model/metadata.json";
 let soilModel;
@@ -23,9 +22,8 @@ async function isSoilImage(img) {
 
 
 
-// Load Crop Data Once
 async function loadCropData() {
-    if (cropData.length > 0) return cropData; // Avoid reloading if already loaded
+    if (cropData.length > 0) return cropData; // Avoids reloading 
 
     try {
         const response = await fetch("./Crop_recommendation.json");
@@ -125,7 +123,7 @@ async function recommendCrop(pH) {
 
     return [...uniqueCrops].map(cropName => ({
         name: cropName,
-        image: `crop_img/${cropName.toLowerCase().replace(/\s+/g, '_')}.jpg` // Example: "Wheat" → "crops/wheat.jpg"
+        image: `crop_img/${cropName.toLowerCase().replace(/\s+/g, '_')}.jpg` 
     }));
 }
 
@@ -197,7 +195,6 @@ async function uploadImage(event) {
         if (!validSoil) {
             clearPrevious();
             document.getElementById("label-container").classList.remove("hidden");
-            // document.getElementById("label-container").innerHTML = "⚠️ Please upload a valid soil image!";
             document.getElementById("label-container").innerHTML = '<span style="color: red; font-weight: bold;">⚠️ Please upload a valid soil image!</span>';
 
             return;
@@ -242,17 +239,14 @@ function getClosestSoilPH(r, g, b) {
     }
     return closestMatch.pH;
 }
-// Clear Previous Data
+
 function clearPrevious() {
     document.getElementById("image-container").innerHTML = "";
     document.getElementById("label-container").innerText = "🔍 Prediction: N/A";
-    // document.getElementById("color-container").innerText = "🌈 Dominant Color: N/A";
     document.getElementById("ph-container").innerText = "🧪 Estimated Soil pH: N/A";
     document.getElementById("npk-container").innerText = "🌾 NPK Values: N/A";
     document.getElementById("crop-container").innerHTML = "🌾 Crop recommendations will be displayed here.";
 
-    // Hide the containers until new data is available
-    // document.getElementById("color-container").classList.add("hidden");
     document.getElementById("label-container").classList.add("hidden");
     document.getElementById("ph-container").classList.add("hidden");
     document.getElementById("npk-container").classList.add("hidden");
@@ -260,11 +254,6 @@ function clearPrevious() {
 }
 
 
-// Initialize Everything
-// async function initialize() {
-//     await loadCropData();
-//     await loadModel();
-// }  
 async function initialize() {
     await loadCropData();
     await loadModel();
